@@ -1,0 +1,212 @@
+<HTML>
+    <HEAD>
+        <TITLE>FIBONACCI NUMBER</TITLE>
+        
+        <STYLE>
+            body
+            {
+            margin: 0px;
+    /*
+                background-image: url("");
+                background-repeat: no-repeat;
+                background-size: cover;
+    */
+                
+            }
+            
+            header
+                {
+                    background-color: black;
+                    width: 100%;
+                    height: 100px;
+                    text-align: center;
+                    font-family:sans-serif;
+                    color:white;
+                   
+                }
+                header h1
+                {
+                    position: relative;
+                    top:29%;
+                    right:15%;
+                }
+                
+                .logo
+                {
+                    border-radius: 50%;
+                    width: 90px;
+                    float: left;
+                    position: relative;
+                    left: 5%;
+                }
+            
+            .horizontal_menu
+                {
+                   width: 100%;
+                    height: 80px;
+                    padding: 0.1px 0px;
+                    background-color:orangered;
+                    color: black;
+                   
+                }
+                
+                .horizontal_menu li
+                {
+                    list-style: none;
+                    display: inline-block;
+                    padding: 10px 20px;
+                    cursor: pointer;
+                    color:white;
+                    
+                }
+                
+                .horizontal_menu li:hover
+                {
+                    background-color: darkorange;
+                    color:white;
+                }
+            
+            /*-----------------------------------------------------------------------------------------------*/
+            
+            .main_portion h1
+            {
+    /*            border: 1px solid;*/
+                text-align: center;
+                width: 100%;
+                text-decoration: underline;
+                margin: 0px;
+                padding: 20px 0px;
+                
+            }
+            
+          .main_portion h2
+            {
+    /*            border: 1px solid;*/
+                width: 800px;
+                margin:0px; 
+                font-size: 30px;
+                position: relative;
+                left: 19%;
+                text-align: center;
+            }
+            
+           #num
+            {
+                padding: 10px 50px;
+                position: relative;
+                left: 35%;
+                top:30px;
+            }
+            
+            #btn
+            {
+                padding: 15px 270px;
+                position: relative;
+                left:40px;
+                top:120px;
+                font-family:serif;
+                border: none;
+                font-size: 25px;
+                letter-spacing: 3px;
+                
+            }
+            
+            #btn:hover
+            {
+            
+                background-color: rgba(0,0,0,0.8);
+                color: white;
+                text-decoration: underline;
+            }
+            
+    /*
+            .main2
+            {
+                border: 1px solid;
+                height: 280px;
+                width: 750px;
+                margin: 0% 30%;
+            }
+    */
+            .link input
+            {
+                padding: 10px 20px;
+                
+                background-color: black;
+                color: white;
+                border:0px;
+                position: relative;
+                top:180px;
+                left:38%;
+            }
+            
+            .link input:hover
+            {
+                background-color: orangered;
+            }
+            
+        </STYLE>
+          <link rel="stylesheet" type="text/css" href="Font/all.css">
+    </HEAD>
+    <BODY>
+     
+        
+    
+        
+        <div class="main_portion">
+        <H1>FIBONACCI NUMBER</H1>
+      
+        
+            <h2>ENTER ANY NUMBER(<label>Greater than or equal to 1</label>)</h2>
+        
+            
+        <input type="number" id="num" min=1>
+        <input type="button" id="btn" onclick="increase()" value="ANSWER">
+        </div>
+        
+        
+    </BODY>
+        
+        <script>
+            function increase()
+            { 
+                var a = document.getElementById("num").value;
+                 
+                if(a=="" || a<=0)
+                    {
+                        alert("PLEASE ENTER A NUMBER");
+                        return false;
+                    }
+                
+                
+                
+                var num1= 0;
+                var num2= 1;
+                document.write("<h2>FIBONACCI NUMBERS UPTO "+a+" ARE :</h2>");
+               
+                if(a==1)
+                    {
+                        document.write(num1);
+                    }
+                else if(a==2)
+                    {
+                        document.write(num1+" "+num2);
+                    }
+                else
+                    {
+                        var num1 = 0;
+                        var num2 = 1;
+                       document.write(num1+" "+num2);
+                        for(var i=0;i<a-2;i++)
+                            {
+                              document.write(" "+(num1+num2));
+                                num3=num1+num2;
+                                num1=num2;
+                                num2=num3;
+                                
+    //                            document.write(i);
+                            }
+                    }
+            }
+        </script>
+    </HTML>

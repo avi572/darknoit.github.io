@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<body style="text-align: center">
+<title>HTML BULB</title>
+<h1 style="text-align: center;background-color: rgb(204, 0, 255); ">BULB LIGHTS USING JAVA SCRIPT<br>180020107038</h1>
+<style>
+h1{
+  border: 5px solid black;
+}
+  body{
+    background-color:lightblue;
+    padding-bottom: 110px;
+  }
+
+    .Yellow:hover{
+        background-color: yellow;
+        color:black;
+
+    }
+    .Red:hover{
+        background-color: red;
+        color:black;
+    }
+    .Blue:hover{
+        background-color: blue;
+        color:black;
+    }
+
+    .White:hover{
+      background-color: white;
+      color:black;
+    }
+    .Red{
+      width:150px;
+      height: 50px;
+      background-color:white;
+      color: black;
+    }
+
+    .Blue{
+      width: 150px;
+      height: 50px;
+      background-color:white;
+      color: black;
+    }
+
+    .Yellow{
+      width: 150px;
+      height: 50px;
+      background-color:white;
+      color: black;
+    }
+
+    .White{
+      width: 150px;
+      height: 50px;
+      background-color:white;
+      color: black;
+    }
+ 
+</style>
+<script>
+function light(sw) {
+  var pic;
+  if (sw  == 1) {
+    pic = "https://images-na.ssl-images-amazon.com/images/I/61eHm2MCzKL._SX342_.jpg"
+  }
+  else if (sw == 2){
+    pic = "https://images-na.ssl-images-amazon.com/images/I/61gnvT0-KyL._SL1500_.jpg"
+  }
+    else if (sw == 3){
+    pic="https://m.media-amazon.com/images/I/61WK3SUynEL._SL1500_.jpg"
+    }
+    else{
+       pic="https://images-na.ssl-images-amazon.com/images/I/61c28r8niZL._SX342_.jpg" 
+    }
+  document.getElementById('myImage').src = pic;
+}
+</script>
+
+<img id="myImage" src="https://images-na.ssl-images-amazon.com/images/I/61eHm2MCzKL._SX342_.jpg" width="170" height="300">
+
+<p>
+<button type="button" onclick="light(1)" class="White">White light</button>
+<button type="button" onclick="light(2)" class="Yellow">Yellow light</button>
+<button type="button" onclick="light(3)" class="Red">Red light</button>
+<button type="button" onclick="light(4)" class="Blue">Blue light</button>
+</p>
+
+</body>
+</html>
